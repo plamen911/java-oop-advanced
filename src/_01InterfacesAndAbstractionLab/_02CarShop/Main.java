@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/498#0
-package _01InterfacesAndAbstractionLab.carShop;
+package _01InterfacesAndAbstractionLab._02CarShop;
 
 /**
  * Created by Plamen Markov on 3/14/17.

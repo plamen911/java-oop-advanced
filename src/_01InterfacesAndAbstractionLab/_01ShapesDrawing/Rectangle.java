@@ -1,4 +1,4 @@
-package _01InterfacesAndAbstractionLab.shapesDrawing;
+package _01InterfacesAndAbstractionLab._01ShapesDrawing;
 
 /**
  * Created by Plamen Markov on 3/14/17.

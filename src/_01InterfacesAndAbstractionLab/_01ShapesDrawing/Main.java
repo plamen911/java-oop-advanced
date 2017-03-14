@@ -1,4 +1,4 @@
-package _01InterfacesAndAbstractionLab.shapesDrawing;
+package _01InterfacesAndAbstractionLab._01ShapesDrawing;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
