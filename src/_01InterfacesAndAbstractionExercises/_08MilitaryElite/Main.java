@@ -1,3 +1,4 @@
+// https://judge.softuni.bg/Contests/Practice/Index/246#7
 package _01InterfacesAndAbstractionExercises._08MilitaryElite;
 
 import _01InterfacesAndAbstractionExercises._08MilitaryElite.military.elite.implementations.*;
