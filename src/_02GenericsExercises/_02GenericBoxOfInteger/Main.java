@@ -1,3 +1,4 @@
+// https://judge.softuni.bg/Contests/Practice/Index/247#1
 package _02GenericsExercises._02GenericBoxOfInteger;
 
 import java.io.BufferedReader;
