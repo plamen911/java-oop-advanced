@@ -7,7 +7,7 @@ import java.util.List;
  * Created by Plamen Markov on 3/18/17.
  */
 public class ListUtils {
-    public static <T extends Comparable<T>> List<Integer> getNullIndices(List<T> list) {
+    public static List<Integer> getNullIndices(List<?> list) {
         if (list.isEmpty()) {
             throw new IllegalArgumentException("Empty list.");
         }
@@ -18,6 +18,7 @@ public class ListUtils {
                 indexes.add(i);
             }
         }
+
         return indexes;
     }
 
