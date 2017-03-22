@@ -1,4 +1,4 @@
-// https://judge.softuni.bg/Contests/Practice/Index/247#4
+// https://judge.softuni.bg/Contests/Practice/Index/247#5
 package _02GenericsExercises._06GenericCountMethodDouble;
 
 import java.io.BufferedReader;
