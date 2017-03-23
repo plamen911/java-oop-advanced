@@ -15,7 +15,7 @@ public class Main {
         } else if (bookOne.compareTo(bookTwo) < 0) {
             System.out.println(String.format("%s is before %s", bookTwo, bookOne));
         } else {
-            System.out.println("Book are equal");
+            System.out.println("_03IteratorsAndComparatorsLab._04BookComparator.Book are equal");
         }
     }
 }
