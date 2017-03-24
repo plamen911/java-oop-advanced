@@ -56,12 +56,12 @@ public class ListyIterator implements Iterable<String> {
 
         @Override
         public boolean hasNext() {
-            return data.size() > counter;
+            return data.size() > this.counter;
         }
 
         @Override
         public String next() {
-            return data.get(counter++);
+            return data.get(this.counter++);
         }
     }
 }
