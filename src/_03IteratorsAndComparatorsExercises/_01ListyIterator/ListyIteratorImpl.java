@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 /**
  * Created by Plamen Markov on 3/23/17.
  */
-public class ListyIteratorImpl<T> implements ListyIterator<T>, Iterable<T> {
+public class ListyIteratorImpl<T> implements ListyIterator<T> {
     private List<T> data;
     private int index;
 
@@ -28,7 +28,8 @@ public class ListyIteratorImpl<T> implements ListyIterator<T>, Iterable<T> {
 
     @Override
     public boolean hasNext() {
-        return this.iterator().hasNext();
+        return this.index < this.data.size() - 1;
+        // return this.iterator().hasNext();
     }
 
     @Override
@@ -57,7 +58,7 @@ public class ListyIteratorImpl<T> implements ListyIterator<T>, Iterable<T> {
     private final class ListyIteratorInner implements Iterator<T> {
         @Override
         public boolean hasNext() {
-            return index < data.size() - 1;
+            return index < data.size();
         }
 
         @Override
