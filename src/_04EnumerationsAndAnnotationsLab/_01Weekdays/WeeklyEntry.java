@@ -6,7 +6,7 @@ import java.util.Comparator;
  * Created by Plamen Markov on 3/25/17.
  */
 public class WeeklyEntry {
-    public static Comparator<WeeklyEntry> BY_WEEKDAY = getComparatorByWeekday();
+    public final static Comparator<WeeklyEntry> BY_WEEKDAY = getComparatorByWeekday();
 
     private Weekday weekday;
     private String notes;
