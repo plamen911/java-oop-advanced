@@ -1,0 +1,18 @@
+package _04EnumerationsAndAnnotationsLab._03CoffeeMachine;
+
+/**
+ * Created by Plamen Markov on 3/25/17.
+ */
+public enum Coin {
+    ONE(1), TWO(2), FIVE(5), TEN(10), TWENTY(20), FIFTY(50);
+
+    private int value;
+
+    Coin(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return this.value;
+    }
+}
