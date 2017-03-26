@@ -11,43 +11,36 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String player1Name = reader.readLine().trim();
-        String player2Name = reader.readLine().trim();
+        Player firstPlayer = new Player(reader.readLine());
+        Player secondPlayer = new Player(reader.readLine());
+        Deck deck = new Deck();
 
-        Player player1 = new Player(player1Name);
-        Player player2 = new Player(player2Name);
-        Card card = null;
-
-        int totalCardsShouldReceive = 10;
-        while (totalCardsShouldReceive > 0) {
-            String[] tokens = reader.readLine().trim().split("\\s+");
+        while (firstPlayer.getSize() < 5) {
             try {
-                card = new Card(tokens[0], tokens[2]);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-                continue;
-            }
-
-            try {
-                if (totalCardsShouldReceive > 5) {
-                    player1.addCard(card);
-                } else {
-                    player2.addCard(card);
-                }
-
-                totalCardsShouldReceive--;
-
-            } catch (IllegalArgumentException e) {
+                firstPlayer.addCard(deck.getCard(reader.readLine()));
+            } catch (IllegalArgumentException | IllegalStateException e) {
                 System.out.println(e.getMessage());
             }
         }
 
-        Card player1HighestCard = player1.getHighestPoweredCard();
-        Card player2HighestCard = player2.getHighestPoweredCard();
-        if (player1HighestCard.compareTo(player2HighestCard) > 0) {
-            System.out.println(player1);
-        } else {
-            System.out.println(player2);
+        while (secondPlayer.getSize() < 5) {
+            try {
+                secondPlayer.addCard(deck.getCard(reader.readLine()));
+            } catch (IllegalArgumentException | IllegalStateException e) {
+                System.out.println(e.getMessage());
+            }
         }
+
+        Player winner = getWinner(firstPlayer, secondPlayer);
+
+        System.out.println(String.format("%s wins with %s.", winner.getName(), winner.getHighestCard()));
+
+    }
+
+    private static Player getWinner(Player firstPlayer, Player secondPlayer) {
+        if (firstPlayer.getHighestCard().compareTo(secondPlayer.getHighestCard()) > 0) {
+            return firstPlayer;
+        }
+        return secondPlayer;
     }
 }
