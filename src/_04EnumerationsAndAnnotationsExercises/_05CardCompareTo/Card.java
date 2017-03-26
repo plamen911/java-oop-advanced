@@ -4,12 +4,12 @@ package _04EnumerationsAndAnnotationsExercises._05CardCompareTo;
  * Created by Plamen Markov on 3/26/17.
  */
 public class Card implements Comparable<Card> {
-    private CardRanks cardRank;
-    private CardSuits cardSuit;
+    private Rank cardRank;
+    private Suit cardSuit;
 
     public Card(String cardRank, String cardSuit) {
-        this.cardRank = CardRanks.valueOf(cardRank);
-        this.cardSuit = CardSuits.valueOf(cardSuit);
+        this.cardRank = Rank.valueOf(cardRank);
+        this.cardSuit = Suit.valueOf(cardSuit);
     }
 
     public int getPower() {

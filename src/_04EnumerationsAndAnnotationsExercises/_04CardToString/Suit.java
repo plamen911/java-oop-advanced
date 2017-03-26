@@ -3,12 +3,12 @@ package _04EnumerationsAndAnnotationsExercises._04CardToString;
 /**
  * Created by Plamen Markov on 3/26/17.
  */
-public enum CardSuits {
+public enum Suit {
     CLUBS(0), DIAMONDS(13), HEARTS(26), SPADES(39);
 
     private int power;
 
-    CardSuits(int power) {
+    Suit(int power) {
         this.power = power;
     }
 

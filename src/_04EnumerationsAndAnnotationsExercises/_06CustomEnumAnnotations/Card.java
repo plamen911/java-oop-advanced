@@ -1,9 +1,9 @@
-package _04EnumerationsAndAnnotationsExercises._04CardToString;
+package _04EnumerationsAndAnnotationsExercises._06CustomEnumAnnotations;
 
 /**
  * Created by Plamen Markov on 3/26/17.
  */
-public class Card {
+public class Card implements Comparable<Card> {
     private Rank cardRank;
     private Suit cardSuit;
 
@@ -20,5 +20,10 @@ public class Card {
     public String toString() {
         return String.format("Card name: %s of %s; Card power: %d",
                 this.cardRank.name(), this.cardSuit.name(), this.getPower());
+    }
+
+    @Override
+    public int compareTo(Card o) {
+        return Integer.compare(this.getPower(), o.getPower());
     }
 }
